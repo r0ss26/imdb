@@ -1,24 +1,25 @@
-# README
+ A challenge for the holiday
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Guess what...time to create another rails app!
+* Create a new app, called imdb, using postgresql as our database
 
-Things you may want to cover:
+* Create the routes to make a full CRUD resource for movies
+    * Not using resource ... actually writing them out
 
-* Ruby version
+* Create a controller for movies, with all necessary methods
+* Use yesterday's starter code to save a variable @movies to our session
 
-* System dependencies
+* Create the views for movies
+* For CREATE and UPDATE, we will need to implement a form!
 
-* Configuration
+* We should be able to:
+    * view all movies
+    * view one movie
+    * update a movie
+    * delete a movie
 
-* Database creation
+Advanced:
+* After completing the CRUD resource, make it look pretty with some styling
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Expert:
+* Already done? Add in another CRUD resource for actors
