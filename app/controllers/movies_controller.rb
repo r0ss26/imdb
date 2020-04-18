@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
     @movies = session[:movies]
-    # puts @movies
   end
 
   def show
@@ -14,16 +13,11 @@ class MoviesController < ApplicationController
     end
     
     session[:movies].push(params[:movie])
-
-    puts "hello: #{session}"
-
     redirect_to movie_path(session[:movies].length - 1)
   end
 
   def update
-    puts "session #{session[:movies]}"
     @movie = session[:movies][params[:id].to_i - 1]
-    puts "movie #{@movie}"
     @movie["title"] = params[:movie]["title"]
     @movie["rating"] = params[:movie]["rating"]
 
@@ -31,6 +25,8 @@ class MoviesController < ApplicationController
   end
 
   def destroy
+    session[:movies].delete_at(params[:id].to_i - 1)
+    redirect_to movies_path
   end
 
   def new

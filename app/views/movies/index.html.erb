@@ -3,7 +3,7 @@
 <ul>
 <% @movies.each_with_index do |movie, i| %>
   <li>
-    <%= movie["title"] %> - <%= movie["rating"] %> <%= link_to "show", movie_path(i + 1) %>
+    <%= movie["title"] %> - <%= movie["rating"] %> <%= link_to "show", movie_path(i + 1) %> <%= link_to "Delete", movie_path(i + 1), {:method => "delete"}%>
   </li>
 <% end %>
 </ul>
