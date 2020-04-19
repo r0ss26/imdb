@@ -4,7 +4,9 @@
   <ul class="movies-list">
   <% @movies.each_with_index do |movie, i| %>
     <li class="movies-list-item"> 
-      <%= movie["title"] %> - <%= movie["rating"] %> <%= link_to "Show", movie_path(i + 1) %> <%= link_to "Delete", movie_path(i + 1), {:method => "delete"}%>
+      <%= movie["title"] %> - <%= movie["rating"] %> 
+      <%= link_to "Show", movie_path(i + 1), class: "btn btn-secondary inline" %> 
+      <%= link_to "Delete", movie_path(i + 1), {method: "delete", class: "btn btn-secondary inline"} %>
     </li>
   <% end %>
   </main>

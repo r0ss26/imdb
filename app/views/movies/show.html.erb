@@ -1,7 +1,6 @@
-<h2><%= @movie["title"] %></h2>
-
-<h3>Rating</h3>
-<p><%= @movie["rating"] %></p>
-
-<%= link_to "Home", movies_path %>
-<%= link_to "Edit", edit_path(@movie["id"].to_i + 1) %>
+<main class="single-movie">
+  <h1><%= @movie["title"] %></h2>
+  <p>Rating: <%= @movie["rating"] %></p>
+  <%= link_to "Home", movies_path, class: "btn btn-secondary inline" %>
+  <%= link_to "Edit", edit_path(@movie["id"].to_i + 1), class: "btn btn-secondary inline" %>
+</main>
